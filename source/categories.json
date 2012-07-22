@@ -1,0 +1,13 @@
+[
+	{
+		"name": "Base",
+		"groups": [
+			{
+				"name": "Core",
+				"classes": [
+					"Titanium"
+				]
+			}
+		]
+	}
+]

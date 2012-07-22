@@ -1,0 +1,12 @@
+[
+	{
+		"title": "TideSDK Guides",
+		"items": [
+			{
+				"name": "getting_started",
+				"title": "Getting started with TideSDK",
+				"desctiption": "This introduction to TideSDK explains how you can get started"
+			}
+		]
+	}
+]
