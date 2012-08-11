@@ -3,9 +3,9 @@
 * TideSDK API objects generally follow the setProperty()/getProperty()
 * pattern, but you may also use accessors for most operations For example:
 * 
-* var window = Ti.UI.currentWindow;
-* window.setHeight(300); // Set the window height to 300 pixels.
-* window.height = 300; // The same.
+* 	var window = Ti.UI.currentWindow;
+* 	window.setHeight(300); // Set the window height to 300 pixels.
+* 	window.height = 300; // The same.
 * 
 * @class Ti
 * @singleton
