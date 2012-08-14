@@ -1,7 +1,68 @@
 /**
-* An object holding a group of properties. Properties may either be defined
-* in tiapp.xml (read-only) or in any other file on the filesystem. TideSDK
-* Properties offer an alternative to traditional HTML5 DOM storage.
+* An object holding a group of properties.
+* Application properties provide an alternative to storing information in
+* HTML5 Databases or through the TideSDK Database module. They can be categorized
+* into System Properties and User Properties. 
+*
+* System Properties
+* -----------------
+* System properties are generally defined in your app's tiapp.xml. There are always
+* read-only.
+* For instance, you can save the properties below in tiapp.xml under the <ti:app> node.
+* 		
+*		<property name="customText" type="string">This is a string</property> 	
+*		<property name="customDouble" type="double">2.45</property>
+*		<property name="customBool" type="boolean">true</property>
+*		<property name="customInt" type="int">9</property>
+*		<property name="customList" type="list">9,8,7</property>
+*
+* You can now access the above properties as shown below:
+*
+*		var appProperties = Ti.App.getSystemProperties();
+*		alert(appProperties.getString('customString'));
+*		alert(appProperties.getInt('customInt'));
+*		
+* Please note that System properties are read-only. It is so because an application
+* might not have write access to its installation directory. This is where tiapp.xml resides.
+* Therefore to store properties, its recommended that you use User properties. 
+*
+* User Properties
+* ---------------
+* User properties are obtained using the same interface as System properties. 
+* Its recommended that you store these in the application data directory.   
+* On Windows, this is __%appdata%/Titanium/appdata.__  
+* On Linux, this is __~/.titanium/appdata/.__  
+* On OSX, this is __~/Library/Application Support/Titanium/appdata.__  
+*
+* Let's take a look at the example below:
+* 
+*		var file = Ti.Filesystem.getFile(Ti.API.application.dataPath, "user.properties");
+*		var userProperties;
+
+*		//if file exists, then load properties.
+*		if(file.exists()) {
+*			userProperties = Ti.App.loadProperties(file);
+*		} else {
+*		//create new set of properties if file doesn't exist
+*			userProperties = Ti.App.createProperties({
+*			  	customText : "This is a string",
+*			  	customDouble : 2.45,
+*			  	customBool : true,
+*			  	customInt	: 1,
+*			  	customList : [9,8,7]	
+*			});
+*		}
+*		
+*		//retrieve a string value
+*		alert(userProperties.getString('customText'));
+*		//set an integer value in properties
+*		userProperties.setInt('customInt',9);
+*		//making sure that the property values are saved to the file object
+*		userProperties.saveTo(file);
+*		//null out file object as pointer not used anymore
+*		file = null;
+*
+*
 * @class Ti.App.Properties
 * @member Ti.App
 */
