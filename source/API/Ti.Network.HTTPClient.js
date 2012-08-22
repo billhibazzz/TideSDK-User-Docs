@@ -7,12 +7,12 @@
 *		var url = 'http://mywebsite.com/api/users/';
 *		//Create the HTTP Client
 *		var client = Ti.Network.createHTTPClient({
-*			onload : function(e) {
+*			onload: function(e) {
 *				//request complete do something with data
 *				//assuming that we are not working with XML
 *				Ti.API.INFO('Response received '+this.responseText);
 *			},
-*			onerror : function(e) {
+*			onerror: function(e) {
 *				//error received, do something
 *			}
 *		});
