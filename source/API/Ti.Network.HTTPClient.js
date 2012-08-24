@@ -1,5 +1,27 @@
 /**
-* An HTTPClient which can be used as an alternative to XMLHttpRequest.
+*An HTTPClient which can be used as an alternative to XMLHttpRequest.    
+*The HTTPClient module is used for making HTTP requests.    
+*A simple 'GET' request has been shown below.    
+*		
+*		//Request URL
+*		var url = 'http://mywebsite.com/api/users/';
+*		//Create the HTTP Client
+*		var client = Ti.Network.createHTTPClient({
+*			onload: function(e) {
+*				//request complete do something with data
+*				//assuming that we are not working with XML
+*				Ti.API.INFO('Response received '+this.responseText);
+*			},
+*			onerror: function(e) {
+*				//error received, do something
+*			}
+*		});
+*
+*		//Specify request type and open 
+*		client.open('GET',url);
+*		//Send request
+*		client.send();
+*
 * @class Ti.Network.HTTPClient
 * @member Ti.Network
 */
