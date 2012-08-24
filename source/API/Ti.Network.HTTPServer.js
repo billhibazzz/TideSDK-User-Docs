@@ -1,8 +1,8 @@
 /**
 * An implementation of an HTTPServer.
 *
-*The HTTPServer module can assist you in creating a HTTP Server.    
-*Refer to the code example below:     
+* The HTTPServer module can assist you in creating a HTTP Server.    
+* Refer to the code example below:     
 *		
 *		//Create the HTTPServer object
 *		var server = Ti.Network.createHTTPServer();
