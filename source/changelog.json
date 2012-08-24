@@ -1,0 +1,18 @@
+[
+    {
+        "date":"Aug 19, 2012",
+        "message":"Added new API docs for the <a href=\"#!/api/Ti.Notification\">notification module</a>"
+    },
+    {
+        "date":"Aug 19, 2012",
+        "message":"Added new API docs for the <a href=\"#!/api/Ti.Database\">database module</a>"
+    },
+    {
+        "date": "Aug 20, 2012",
+        "message": "Updated the documentation theme"
+    },
+    {
+        "date": "Aug 22, 2012",
+        "message": "Added new API docs for the <a href=\"#!/api/Ti.Network.HTTPServer\">HTTPServer</a> and <a href=\"#!/api/Ti.Network.HTTPClient\">HTTPClient</a> module"
+    }
+]
