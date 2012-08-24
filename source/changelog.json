@@ -14,5 +14,9 @@
     {
         "date": "Aug 22, 2012",
         "message": "Added new API docs for the <a href=\"#!/api/Ti.Network.HTTPServer\">HTTPServer</a> and <a href=\"#!/api/Ti.Network.HTTPClient\">HTTPClient</a> module"
+    },
+     {
+        "date": "Aug 24, 2012",
+        "message": "Documentation for <a href=\"#!/api/Ti.Network.TCPSocket\">TCPSocket</a>"
     }
 ]
