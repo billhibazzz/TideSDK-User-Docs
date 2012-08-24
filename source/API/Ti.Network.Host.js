@@ -1,5 +1,14 @@
 /**
 * An object representing a host on the network.
+* 
+* The following code shows some uses of the Ti.Network.Host object.    
+*
+*		var localhost = Ti.Network.getHostByAddress('127.0.0.1');
+*		
+*		localhost.isInvalid(); //returns true if the host is valid and on the network. 
+*		localhost.getAliases(); //returns an array of all aliases for the host defined by the address above. 
+*		
+*
 * @class Ti.Network.Host
 * @member Ti.Network
 */
