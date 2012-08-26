@@ -1,5 +1,18 @@
 /**
 * A module for creating processes.
+* A simple example for process creation can be seen below:
+*
+*		//Following code executes a python script located in
+*		//the resources folder.
+*
+*		var myScript = Ti.Process.createProcess({
+*                args:['python',Ti.API.application.resourcesPath + "/myScript.py"]
+*        });
+*		
+*		//Launches the process	
+*       myScript.launch();
+*
+* 		
 * @class Ti.Process
 * @singleton
 * @member Ti
