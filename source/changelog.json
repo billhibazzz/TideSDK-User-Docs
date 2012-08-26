@@ -15,8 +15,12 @@
         "date": "Aug 22, 2012",
         "message": "Added new API docs for the <a href=\"#!/api/Ti.Network.HTTPServer\">HTTPServer</a> and <a href=\"#!/api/Ti.Network.HTTPClient\">HTTPClient</a> module"
     },
-     {
+    {
         "date": "Aug 24, 2012",
         "message": "Documentation for <a href=\"#!/api/Ti.Network.TCPSocket\">TCPSocket</a>"
+    },
+    {
+        "date": "Aug 25, 2012",
+        "message": "Fixed layout issue in option list of <a href=\"#!/api/Ti.UI.UserWindow-method-openSaveAsDialog\">Ti.UI.UserWindow-method-openSaveAsDialog</a>
     }
 ]
