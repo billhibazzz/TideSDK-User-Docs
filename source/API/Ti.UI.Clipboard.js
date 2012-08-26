@@ -1,5 +1,20 @@
 /**
-* A module used for accessing clipboard data.
+* A module used for accessing clipboard data.    
+* Please refer to the code examples below:    
+* 	//Code below stores text into the clipboard.    
+* 	Ti.UI.Clipboard.setData('text/plain', 'This is my custom text');       
+*
+*		//Retrieving the stored data.
+*	  	Ti.UI.Clipboard.getData('text/plain'); //should return 'This is my custom text'
+* 
+* Working with text only
+* ----------------------
+* For setting text/plain data, rather than using the above methods, you may
+* use the setText/getText methods.
+*
+*		Ti.UI.Clipboard.setText('This is my custom text');
+*		Ti.UI.Clipboard.getText(); //should return 'This is my custom text'
+*
 * @class Ti.UI.Clipboard
 * @member Ti.UI
 */

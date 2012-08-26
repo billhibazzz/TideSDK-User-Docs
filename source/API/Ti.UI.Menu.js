@@ -1,5 +1,28 @@
 /**
 * An object representing a menu.
+*
+* A Menu object can be added to the current window of a TideSDK application. Menu objects can 
+* be made up of a number of MenuItems(see Ti.UI.MenuItem). These menu items can be added to the 
+* menu object at anytime and TideSDK will ensure that all menu instances update immediately.     
+* 
+* Please take a look at the code example below:     
+* 
+*			//Create the menu object      
+* 		var menu = Ti.UI.createMenu;
+*			
+*			//Create menu items
+*			var subMenu1 = Ti.UI.createMenuItem('Menu1');
+*			var subMenu2 = Ti.UI.createMenuItem('Menu2');	
+*			var subMenu3 = Ti.UI.createMenuItem('Menu3');		
+*			
+*			//Add the menu items to menu
+*			menu.appendItem(subMenu1);
+*			menu.appendItem(subMenu2);
+*			menu.appendItem(subMenu3);	
+*
+*			//Add menu to the current window
+*			Ti.UI.currentWindow.menu = menu;
+*
 * @class Ti.UI.Menu
 * @member Ti.UI
 */
