@@ -11,7 +11,7 @@ The Basics
 ----------
 At first, download our [concatenated API skeleton] in JavaScript format and save it on your harddrive.
 
-[concatenated API skeleton]: http://tidesdk.multipart.net/docs/user-dev/source/source_concatenator/Ti.js
+[concatenated API skeleton]: http://tidesdk.multipart.net/docs/user-dev/generated/resources/Ti.js
 
 
 Adding the code-completion to your IDE
