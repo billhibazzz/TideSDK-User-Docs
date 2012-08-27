@@ -10,20 +10,20 @@
 */
 var fs = require('fs'),
     src = '',
-    files = fs.readdirSync('../API/');
+    files = fs.readdirSync('../../source/API/');
 
 //Remove the "Ti.js" from the list, since this is the file we have to start with.
 files.splice(files.indexOf('Ti.js'), 1);
 
-var src = fs.readFileSync('../API/Ti.js', 'utf8') + '\n';
+var src = fs.readFileSync('../../source/API/Ti.js', 'utf8') + '\n';
 
 for(var i = 0; i < files.length; i++){
-    src += fs.readFileSync('../API/' + files[i], 'utf8') + '\n';
+    src += fs.readFileSync('../../source/API/' + files[i], 'utf8') + '\n';
 }
 
 //Namespace fix has to be removed when the namespace move from Titanium.* to Ti.* is made!
 src = src.replace(/Ti\./g, 'Titanium.').replace(/Ti = \{/, 'Titanium = {');
 
-fs.writeFileSync('../Ti.js', src, 'utf8');
+fs.writeFileSync('../../generated/resources/Ti.js', src, 'utf8');
 
 console.log('done');
