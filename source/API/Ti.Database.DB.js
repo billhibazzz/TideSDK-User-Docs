@@ -1,11 +1,11 @@
 /**
 * An object representing a TideSDK Database.
-*After opening a database (Ti.Database), you can use the properties of this object to interact with it.
+* After opening a database (Ti.Database), you can use the properties of this object to interact with it.
 *
-*Querying Databases
-*------------------
-*Note - Please make sure that all queries are SQLite compatible. 
-*Please refer to the code examples below:
+* Querying Databases
+* ------------------
+* Note - Please make sure that all queries are SQLite compatible. 
+* Please refer to the code examples below:
 *
 *		//Open the database first
 *		var db = Ti.Database.openFile(Ti.Filesystem.getFile(

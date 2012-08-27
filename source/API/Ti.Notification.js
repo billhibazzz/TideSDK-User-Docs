@@ -1,10 +1,10 @@
 /**
 * A module for displaying desktop notifications.
-*TideSDK allows you to display notifications from your desktop apps using Growl on OS X, 
-*Snarl on Windows and libnotify on Linux. In the event of a notification provider being absent, 
-*notifications are shown using HTML/CSS.
+* TideSDK allows you to display notifications from your desktop apps using Growl on OS X, 
+* Snarl on Windows and libnotify on Linux. In the event of a notification provider being absent, 
+* notifications are shown using HTML/CSS.
 *
-*Please refer to the code example below
+* Please refer to the code example below
 *
 *		//Create a callback function for the notification
 *		var doSomething = function() {

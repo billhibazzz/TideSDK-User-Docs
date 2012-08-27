@@ -1,5 +1,32 @@
 /**
 * An object representing an IO pipe.
+* An IO Pipe helps in reading data from an input stream, processing
+* this data and then writing this to an output stream.  
+*      
+* This can be demonstrated with the example below.     
+*		
+* 		var echoCmd = Titanium.platform === "win32" ? ["C:\\Windows\\System32\\cmd.exe", "/C", "echo"] : ["/bin/echo"];
+*	
+* 		echoCmd.push("Data.from.echo!");
+*
+* 		var moreCmd = Titanium.platform === "win32" ? ["C:\\Windows\\System32\\more.com"] : ["cat"];
+*
+* 		// Create the processes.
+* 		var echo = Titanium.Process.createProcess(echoCmd);
+* 		var more = Titanium.Process.createProcess(moreCmd);
+*		
+*			//Code for displaying the data received by the 'more' process.
+* 		more.setOnReadLine(function(data) {
+* 		 	alert(data.toString());
+* 		});
+*
+* 		//Attaching the processes through IO pipes below.
+* 		echo.stdout.attach(more.stdin);
+*			//Launching Processes.
+* 		echo.launch();
+* 		more.launch();     
+*
+*
 * @class Ti.Process.Pipe
 * @member Ti.Process
 */

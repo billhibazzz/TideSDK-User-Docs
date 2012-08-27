@@ -1,7 +1,7 @@
 /**
-*An HTTPClient which can be used as an alternative to XMLHttpRequest.    
-*The HTTPClient module is used for making HTTP requests.    
-*A simple 'GET' request has been shown below.    
+* An HTTPClient which can be used as an alternative to XMLHttpRequest.    
+* The HTTPClient module is used for making HTTP requests.    
+* A simple 'GET' request has been shown below.    
 *		
 *		//Request URL
 *		var url = 'http://mywebsite.com/api/users/';

@@ -2,10 +2,10 @@
 * An object representing a TideSDK application, either the currently running
 * application or one on disk. 
 *
-*Example
-*------------
-*You can retrieve information about the currently running TideSDK application
-*using the Ti.API.getApplication module.
+* Example
+* ------------
+* You can retrieve information about the currently running TideSDK application
+* using the Ti.API.getApplication module.
 *
 *		var app = Ti.API.application;
 *		alert(app.getPID()); //Alert the process identifier for this application.

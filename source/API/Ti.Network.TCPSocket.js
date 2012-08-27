@@ -1,17 +1,17 @@
 /**
 * An object representing a TCP client socket connection.
-A simple implementation of connecting to a host has been shown below. 
-		//Create the connection.
-		var socket = Ti.Network.createTCPSocket("127.0.0.1", 8080);
-		socket.connect();
-
-		//The onReadComplete function below ensures that the
-		//read operation is completed and all bytes have been received.
-
-		socket.onReadComplete(function(data) {
-            alert(data);
-        });    
-
+* A simple implementation of connecting to a host has been shown below. 
+*		//Create the connection.
+*		var socket = Ti.Network.createTCPSocket("127.0.0.1", 8080);
+*		socket.connect();
+*
+*		//The onReadComplete function below ensures that the
+*		//read operation is completed and all bytes have been received.
+*
+*		socket.onReadComplete(function(data) {
+*            alert(data);
+*        });    
+*
 * @class Ti.Network.TCPSocket
 * @member Ti.Network
 */
