@@ -29,6 +29,6 @@
     },
     {
         "date": "Aug 27 2012",
-        "message": "Documentation for <a href=\"#!/api/Ti.UI.Menu\">Menu</a> and <a href=\"#!/api/Ti.UI.Clipboard\">Clipboard</a>"
+        "message": "Documentation for <a href=\"#!/api/Ti.UI.Menu\">Menu</a> and <a href=\"#!/api/Ti.UI.Clipboard\">Clipboard</a>.<br>New guide: <a href=\"#!/guide/ide_autocompletion\">Setting up code completion</a>"
     }
 ]

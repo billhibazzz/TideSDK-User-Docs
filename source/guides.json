@@ -6,7 +6,12 @@
 				"name": "doc_contribution",
 				"title": "Contributing to the documentation",
 				"description": "If you want to help out improving the TideSDK documentation, you should read this guide."
-			}
+			},
+            {
+                "name": "ide_autocompletion",
+                "title": "Setting up code completion",
+                "description": "This article covers the usage of code-completion in different IDEs."
+            }
 		]
 	},
 	{
