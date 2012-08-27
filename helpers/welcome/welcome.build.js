@@ -8,7 +8,7 @@ var fs = require('fs');
 
 var main_template = fs.readFileSync('welcome.template.html', 'utf8'),
     element_template = fs.readFileSync('changelog-item.html', 'utf8'),
-    changelog = JSON.parse(fs.readFileSync('../changelog.json', 'utf8'));
+    changelog = JSON.parse(fs.readFileSync('../../source/changelog.json', 'utf8'));
 
 changelog.reverse();
 
@@ -22,6 +22,6 @@ while(cnt < max){
 }
 
 
-fs.writeFileSync('../welcome.html', main_template.replace(/\{\{changelog\}\}/gm, html));
+fs.writeFileSync('../../source/welcome.html', main_template.replace(/\{\{changelog\}\}/gm, html));
 
 console.log('done');

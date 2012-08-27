@@ -24,6 +24,6 @@ for(var i = 0; i < files.length; i++){
 //Namespace fix has to be removed when the namespace move from Titanium.* to Ti.* is made!
 src = src.replace(/Ti\./g, 'Titanium.').replace(/Ti = \{/, 'Titanium = {');
 
-fs.writeFileSync('Ti.js', src, 'utf8');
+fs.writeFileSync('../Ti.js', src, 'utf8');
 
 console.log('done');
