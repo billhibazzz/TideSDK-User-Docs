@@ -6,6 +6,7 @@
 	"--categories": "categories.json",
 	"--output": "../generated",
 	"--no-source": "",
+    "--seo": "",
 	"--template": "../template",
 	"--":[
 		"API"
