@@ -1,5 +1,22 @@
 /**
 * An object representing a top-level TideSDK window.
+* All windows in TideSDK are Ti.UI.UserWindow objects.      
+* The current window can be accessed and modified as shown below:      
+*
+*		var window = Ti.UI.currentWindow;
+*		window.setTitle('New Title'); // Will set window title to New Title
+*
+* Once you open a window, you can close it at anytime. This will ensure that all
+* resources attached to that window are freed up. However, this also means that
+* the window cannot be opened again. 
+* If you need to hide a window , the following code can be used :
+*
+*		Ti.UI.currentWindow.hide(); //window hidden
+*		setTimeout(function() {
+*			Ti.UI.currentWindow.show(); //window shown
+*		}, 3000);
+*		
+* 
 * @class Ti.UI.UserWindow
 * @member Ti.UI
 */
