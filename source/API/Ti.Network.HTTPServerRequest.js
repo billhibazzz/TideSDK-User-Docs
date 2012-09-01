@@ -14,7 +14,6 @@ getContentLength: function(){},
 /**
 * get an HTTP header value from this request
 * @param {String} header the header of the request
-* @param {String} header the header of the request
 * @return {String}
 * @member Ti.Network.HTTPServerRequest
 */
