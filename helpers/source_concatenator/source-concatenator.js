@@ -22,7 +22,7 @@ for(var i = 0; i < files.length; i++){
 }
 
 //Namespace fix has to be removed when the namespace move from Titanium.* to Ti.* is made!
-src = src.replace(/Ti\./g, 'Titanium.').replace(/Ti = \{/, 'Titanium = {');
+src = src.replace(/Ti\./g, 'Titanium.').replace(/Ti = \{/, 'var Titanium = {');
 
 fs.writeFileSync('../../generated/resources/Ti.js', src, 'utf8');
 
