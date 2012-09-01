@@ -10,7 +10,7 @@ Ti.UI = {
 * @property {Number}
 * @member Ti.UI
 */
-CENTERED: null,
+CENTERED: -404404404,
 
 /**
 * "Empty the tray of all this application's tray items"

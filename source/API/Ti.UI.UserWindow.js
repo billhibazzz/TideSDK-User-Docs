@@ -21,6 +21,305 @@
 * @member Ti.UI
 */
 Ti.UI.UserWindow = {
+
+/**
+* The ALL event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+ALL: "all",
+/**
+* @event all Fired on any event
+*/
+
+/**
+* The APP_EXIT event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+APP_EXIT: "app.exit",
+/**
+* @event app.exit Fired on application exit
+*/
+
+/**
+* The CLOSE event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+CLOSE: "close",
+/**
+* @event close Fired before window close
+*/
+
+/**
+* The CLOSED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+CLOSED: "closed",
+/**
+* @event closed Fired after window close
+*/
+
+/**
+* The CREATED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+CREATED: "create",
+/**
+* @event create Fired on window creation
+*/
+
+/**
+* The EXIT event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+EXIT: "exit",
+/**
+* @event exit Fired on application exit
+*/
+
+/**
+* The FOCUSED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+FOCUSED: "focused",
+/**
+* @event focused Fired when window gains focus
+*/
+
+/**
+* The FULLSCREENED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+FULLSCREENED: "fullscreened",
+/**
+* @event fullscreened Fired when window switches into fullscreen mode
+*/
+
+/**
+* The HIDDEN event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+HIDDEN: "hidden",
+/**
+* @event hidden Fired when window has been hidden
+*/
+
+/**
+* The HTTP_ABORT event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+HTTP_ABORT: "http.abort",
+/**
+* @event http.abort
+*/
+
+/**
+* The CLOSED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+HTTP_DATA_RECEIVED: "http.datareceived",
+/**
+* @event http.datarecived
+*/
+
+/**
+* The HTTP_DATA_SENT event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+HTTP_DATA_SENT: "http.datasent",
+/**
+* @event http.datasent
+*/
+
+/**
+* The HTTP_DONE event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+HTTP_DONE: "http.done",
+/**
+* @event http.done
+*/
+
+/**
+* The HTTP_REDIRECT event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+HTTP_REDIRECT: "http.redirect",
+/**
+* @event http.redirect
+*/
+
+/**
+* The HTTP_STATE_CHANGED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+HTTP_STATE_CHANGED: "http.statechanged",
+/**
+* @event http.statechanged
+*/
+
+/**
+* The HTTP_TIMEOUT event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+HTTP_TIMEOUT: "http.timeout",
+/**
+* @event http.timeout
+*/
+
+/**
+* The MAXIMIZED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+MAXIMIZED: "maximized",
+/**
+* @event maximized Fired when the window got maximized
+*/
+
+/**
+* The MINIMIZED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+MINIMIZED: "minimized",
+/**
+* @event minimized Fired when the window got minimized
+*/
+
+/**
+* The MOVED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+MOVED: "moved",
+/**
+* @event moved Fired when the window has been moved
+*/
+
+/**
+* The OPEN event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+OPEN: "open",
+/**
+* @event open Fired before the window is opened
+*/
+
+/**
+* The OPENED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+OPENED: "opened",
+/**
+* @event opened Fired after the window has been opened.
+*/
+
+/**
+* The OPEN_REQUEST event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+OPEN_REQUEST: "open.request",
+/**
+* @event open.request
+*/
+
+/**
+* The PAGE_INITIALIZED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+PAGE_INITIALIZED: "page.init",
+/**
+* @event page.init
+*/
+
+/**
+* The PAGE_LOADED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+PAGE_LOADED: "page.load",
+/**
+* @event page.load
+*/
+
+/**
+* The READ event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+READ: "read",
+/**
+* @event read
+*/
+
+/**
+* The RESIZED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+RESIZED: "resized",
+/**
+* @event resized Fired when the window has been resized
+*/
+
+/**
+* The SHOWN event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+SHOWN: "shown",
+/**
+* @event shown Fired when the window has been shown
+*/
+
+/**
+* The UNFOCUSED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+UNFOCUSED: "unfocused",
+/**
+* @event unfocused Fired when the window loses focus
+*/
+
+/**
+* The UNFULLSCREENED event constant
+* @property {String}
+* @member Ti.UI.UserWindow
+*/
+UNFULLSCREENED: "unfullscreened",
+/**
+* @event unfullscreened Fired when the window leaves fullscreen mode
+*/
+
+/**
+* Registers a single event listener on the window.
+* To register more than one event listener for the window, call `addEventListener()` multiple times but with different event types.
+* @param {String} type A string representing the event type to listen for.
+* @param {EventListener|Function} listener The object that receives a notification when an event of the specified type occurs. This must be an object implementing the [EventListener interface](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener), or simply a JavaScript function.
+*/
+addEventListener: function(type, listener){},
+
 /**
 * Closes a window
 * @return {String}
@@ -68,6 +367,14 @@ getChildren: function(){},
 * @member Ti.UI.UserWindow
 */
 getContextMenu: function(){},
+
+/**
+* Return the current window. This function does not exist outside of the context
+* of a window.
+* @return {Ti.UI.UserWindow}
+* @member Ti.UI.UserWindow
+*/
+getCurrentWindow: function(){},
 
 /**
 * Return the WebKit DOMWindow of the page loaded in this window if
@@ -171,6 +478,13 @@ getURL: function(){},
 getWidth: function(){},
 
 /**
+* Return this windows DOMWindow object.
+* @return {DOMWindow} the DOMWindow object of this window.
+* @member Ti.UI.UserWindow
+*/
+getWindow: function(){},
+
+/**
 * Return a UI.UserWindow's horizontal (X-axis) position on the screen. The
 * origin of the screen is considered to be the top-left on all platforms.
 * @return {Number}
@@ -216,11 +530,11 @@ hide: function(){},
 isCloseable: function(){},
 
 /**
-* true if this window is a UI Dialog
-* @property {Boolean}
+* Returns true if this window is a UI Dialog
+* @return {Boolean}
 * @member Ti.UI.UserWindow
 */
-isDialog: null,
+isDialog: function(){},
 
 /**
 * Checks whether a window is in an edited state
@@ -273,6 +587,13 @@ isMinimized: function(){},
 isResizable: function(){},
 
 /**
+* Checks whether a window is a toolwindow
+* @return {Boolean}
+* @member Ti.UI.UserWindow
+*/
+isToolWindow: function(){},
+
+/**
 * Checks whether a window is top most
 * @return {Boolean}
 * @member Ti.UI.UserWindow
@@ -306,6 +627,14 @@ minimize: function(){},
 * @member Ti.UI.UserWindow
 */
 maximize: function(){},
+
+/**
+* Moves the window to the specified position.
+* @param {Integer} x
+* @param {Integer} y
+* @return {Void}
+*/
+moveTo: function(x, y){},
 
 /**
 * Opens a window
@@ -362,6 +691,14 @@ openFolderChooserDialog: function(callback, options){},
 openSaveAsDialog: function(callback, options){},
 
 /**
+* Allows the removal of eventlisteners from the window.
+* @param {String} type A string representing the event type being removed.
+* @param {EventListener|Function} listener The listener object to be removed.
+* @member Ti.UI.UserWindow
+*/
+removeEventListener: function(type, listener){},
+
+/**
 * Set this window's bounds object. A bounds object is a simple JavaScript object
 * containing four properties <tt>x</tt>, <tt>y</tt>, <tt>width<tt>, and <tt>height</tt>
 * which correspond to the window geometry on the screen in pixels.
@@ -392,7 +729,7 @@ setContents: function(contents, baseURL){},
 
 /**
 * "Set this window's context menu"
-* @param {UI.Menu|null} menu The Menu object to use as the context menu or null to unset the menu.
+* @param {Ti.UI.Menu|null} menu The Menu object to use as the context menu or null to unset the menu.
 * @return {String}
 * @member Ti.UI.UserWindow
 */
@@ -456,7 +793,7 @@ setMaxWidth: function(width){},
 
 /**
 * "Set this window's menu"
-* @param {UI.Menu|null} menu The Menu object to use as the menu or null to unset the menu.
+* @param {Ti.UI.Menu|null} menu The Menu object to use as the menu or null to unset the menu.
 * @return {String}
 * @member Ti.UI.UserWindow
 */
@@ -518,6 +855,8 @@ setSize: function(width, height){},
 * @member Ti.UI.UserWindow
 */
 setTitle: function(title){},
+
+
 
 /**
 * Sets whether a window is top most (above other windows)
