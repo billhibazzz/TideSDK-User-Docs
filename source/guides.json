@@ -14,6 +14,52 @@
             }
 		]
 	},
+
+	/*{
+		"title": "Gettings Started",
+		"items": []
+	},
+
+	{
+		"title": "Scripting Languages",
+		"items": []
+	},
+
+	{
+		"title": "API Usage",
+		"items": []
+	},
+
+	{
+		"title": "Advanced Topics",
+		"items": []
+	},
+
+	{
+		"title": "Module Development",
+		"items": []
+	},
+
+	{
+		"title": "Preparing Apps for AppStores",
+		"items": []
+	},
+
+	{
+		"title": "Game Development",
+		"items": []
+	},
+	
+	{
+		"title": "Multimedia in TideSDK",
+		"items": []
+	},
+
+	{
+		"title": "Development Patterns",
+		"items": []
+	},*/
+
 	{
 		"title": "Legacy Titanium Guides",
 		"items": [

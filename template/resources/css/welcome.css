@@ -22,14 +22,14 @@
 }
 
 .wpage h1{
-    font-family: "Diavlo", Helvetica, Arial, sans-serif;
+    font-family: "Exo", Helvetica, Arial, sans-serif;
     /*font-weight: bold;
     color: #222 !important;*/
     margin-bottom: 5px;
 }
 
 .wpage h2{
-  font-family: "Diavlo", Helvetica, Arial, sans-serif;
+  font-family: "Exo", Helvetica, Arial, sans-serif;
   color: #222;
 	font-size: 24px;
 	margin-bottom: 10px;
@@ -59,7 +59,7 @@
 .wpage .btn {
   display: inline-block;
   *display: inline;
-  font-family: "Diavlo", Helvetica, Arial, sans-serif;
+  font-family: "Exo", Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #618497;
   text-decoration: none;
@@ -104,7 +104,7 @@
 
 .wpage .download{
   display: inline-block;
-  font-family: "Diavlo", Helvetica, Arial, sans-serif;
+  font-family: "Exo", Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #fff;
   text-decoration: none;
