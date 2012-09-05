@@ -1,31 +1,31 @@
 /**
 * A module for dealing with Database storage.
-*There are two ways to use databases in TideSDK - HTML5 Databases and the TideSDK Database API. Both API's make 
-*use of SQLite backends. 
-*
-*Opening a Database
-*------------------
-*You can open databases in TideSDK using the Ti.Database.open and Ti.Database.openFile methods.
-*Using Ti.Database.open will create a database which is WebKit compatible in the same directory.
-*(Only if the database file doesn't exist.)
-*	
-*		//Create a database which is WebKit compatible.
-*		var db = Ti.Database.open('customdatabase');
-*
-*Alternatively, you can create a database and open it using the Ti.Database.openFile method. This method
-*accepts a file path or a Ti.Filesystem.File object.
-*
-*		//Create a database
-*		var db = Ti.Database.openFile(Ti.Filesystem.getFile(
-*									  Ti.Filesystem.getApplicationDataDirectory(), 'customdatabase.db'));	
-*
-*Querying Databases
-*------------------
-*Please refer to the Ti.Database.DB documentation.
-*
-*Note - It is recommended that you store all data in the application data directory and not the application resources
-*or contents directory as those may not be writeable.
-*
+* There are two ways to use databases in TideSDK - HTML5 Databases and the TideSDK Database API. Both API's make 
+* use of SQLite backends. 
+* 
+* Opening a Database
+* ------------------
+* You can open databases in TideSDK using the Ti.Database.open and Ti.Database.openFile methods.
+* Using Ti.Database.open will create a database which is WebKit compatible in the same directory.
+* (Only if the database file doesn't exist.)
+* 	
+* 		//Create a database which is WebKit compatible.
+* 		var db = Ti.Database.open('customdatabase');
+* 
+* Alternatively, you can create a database and open it using the Ti.Database.openFile method. This method
+* accepts a file path or a Ti.Filesystem.File object.
+* 
+* 		//Create a database
+* 		var db = Ti.Database.openFile(Ti.Filesystem.getFile(
+* 									  Ti.Filesystem.getApplicationDataDirectory(), 'customdatabase.db'));	
+* 
+* Querying Databases
+* ------------------
+* Please refer to the Ti.Database.DB documentation.
+* 
+* Note - It is recommended that you store all data in the application data directory and not the application resources
+* or contents directory as those may not be writeable.
+* 
 * @class Ti.Database
 * @singleton
 * @member Ti

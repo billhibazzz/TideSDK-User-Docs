@@ -34,5 +34,9 @@
     {
         "date": "Sep 2 2012",
         "message": "Added missing properties, methods and events to <a href=\"#!/api/Ti.UI.UserWindow\">Ti.UI.UserWindow</a>"
+    },
+    {
+        "date": "Sep 5 2012",
+        "message": "Fixed formatting and added code examples to <a href=\"#!/api/Ti.Filesystem\">Ti.Filesystem</a>"
     }
 ]

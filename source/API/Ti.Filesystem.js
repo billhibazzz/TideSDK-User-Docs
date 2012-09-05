@@ -1,5 +1,26 @@
 /**
-* A module for accessing the Filesystem.
+* A module for accessing the Filesystem.      
+* This module contains methods that help a TideSDK application manage files and read/write data to them. 
+* We recommend that you store/create your application files in the application data directory 
+* referenced by Ti.Filesystem.getApplicationDataDirectory.      
+* This is so because the contents or resources directory may not always be writeable.
+* 
+* Refer to the code examples below for some basic file/filestream operations
+*		
+*		 //Check for existance of a file
+*		var document = Ti.Filesystem.getFile(Ti.Filesystem.getApplicationDataDirectory(),'custom.txt');
+*		
+*		if(document.exists()) {
+*		 	//file exists , do something with it
+*		}
+*
+*		//Writing data to a file
+*		var document = Ti.Filesystem.getFileStream(Ti.Filesystem.getApplicationDataDirectory(),'custom.txt');
+*		document.open(Ti.Filesystem.MODE_WRITE);
+*		document.write('New Data for File');
+*		document.close();
+*
+*
 * @class Ti.Filesystem
 * @singleton
 * @member Ti
