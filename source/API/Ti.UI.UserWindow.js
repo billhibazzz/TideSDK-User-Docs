@@ -867,12 +867,13 @@ setTitle: function(title){},
 setTopMost: function(topmost){},
 
 /**
-* "Sets a window's transparency value"
-* @param {Number} url the transparency value of the window
-* @return {String}
+* Sets a window's transparency value
+* Note: this will make the window and ALL of its contents transparent.
+* @param {Number} A value between 0 and 1 where 0 is fully transparent.
+* @return {Void}
 * @member Ti.UI.UserWindow
 */
-setTransparency: function(url){},
+setTransparency: function(alpha){},
 
 /**
 * Sets the url for a window
