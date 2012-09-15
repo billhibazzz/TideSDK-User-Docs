@@ -7,21 +7,16 @@
 * 
 * Please take a look at the code example below:     
 * 
-*			//Create the menu object      
-* 		var menu = Ti.UI.createMenu;
+*			//Create the menu object
+* 			var menu = Ti.UI.createMenu();
 *			
 *			//Create menu items
-*			var subMenu1 = Ti.UI.createMenuItem('Menu1');
-*			var subMenu2 = Ti.UI.createMenuItem('Menu2');	
-*			var subMenu3 = Ti.UI.createMenuItem('Menu3');		
-*			
-*			//Add the menu items to menu
-*			menu.appendItem(subMenu1);
-*			menu.appendItem(subMenu2);
-*			menu.appendItem(subMenu3);	
+*			var subMenu1 = menu.addItem('Menu1');
+*			var subMenu2 = menu.addItem('Menu2');
+*			var subMenu3 = menu.addItem('Menu3');
 *
 *			//Add menu to the current window
-*			Ti.UI.currentWindow.menu = menu;
+*			Ti.UI.getCurrentWindow().setMenu(menu);
 *
 * @class Ti.UI.Menu
 * @member Ti.UI
