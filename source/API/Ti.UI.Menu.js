@@ -18,6 +18,10 @@
 *			//Add menu to the current window
 *			Ti.UI.getCurrentWindow().setMenu(menu);
 *
+*			//Or alternatively you can use the snippet below
+*			//to add the menu to the current window
+*			//Ti.UI.currentWindow.menu = menu; 
+*
 * @class Ti.UI.Menu
 * @member Ti.UI
 */
