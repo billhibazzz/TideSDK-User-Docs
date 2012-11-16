@@ -39,7 +39,7 @@ ALL: "all",
 */
 APP_EXIT: "app.exit",
 /**
-* @event app.exit Fired on application exit
+* @event "app.exit" Fired on application exit
 */
 
 /**
@@ -119,7 +119,7 @@ HIDDEN: "hidden",
 */
 HTTP_ABORT: "http.abort",
 /**
-* @event http.abort
+* @event "http.abort"
 */
 
 /**
@@ -129,7 +129,7 @@ HTTP_ABORT: "http.abort",
 */
 HTTP_DATA_RECEIVED: "http.datareceived",
 /**
-* @event http.datarecived
+* @event "http.datarecived"
 */
 
 /**
@@ -139,7 +139,7 @@ HTTP_DATA_RECEIVED: "http.datareceived",
 */
 HTTP_DATA_SENT: "http.datasent",
 /**
-* @event http.datasent
+* @event "http.datasent"
 */
 
 /**
@@ -149,7 +149,7 @@ HTTP_DATA_SENT: "http.datasent",
 */
 HTTP_DONE: "http.done",
 /**
-* @event http.done
+* @event "http.done"
 */
 
 /**

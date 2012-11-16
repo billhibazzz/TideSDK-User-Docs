@@ -38,5 +38,9 @@
     {
         "date": "Sep 5 2012",
         "message": "Fixed formatting and added code examples to <a href=\"#!/api/Ti.Filesystem\">Ti.Filesystem</a>"
+    },
+    {
+        "date": "Nov 16 2012",
+        "message": "Added guides section 'Beginner Guides' with 4 new guides."
     }
 ]

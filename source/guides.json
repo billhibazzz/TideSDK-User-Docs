@@ -15,10 +15,31 @@
 		]
 	},
 
-	/*{
-		"title": "Gettings Started",
-		"items": []
-	},
+	{
+		"title": "Beginner Guides",
+		"items": [
+			{
+				"name": "getting_started",
+				"title": "Getting started with TideSDK",
+				"description": "This introducion into TideSDK explains the structure and features of the SDK, as well as how you can develop apps."
+			},
+			{
+				"name": "using_php",
+				"title": "Using PHP in TideSDK",
+				"description": "This introducion demonstrates the usage of the PHP language within TideSDK apps."
+			},
+			{
+				"name": "using_python",
+				"title": "Using Python in TideSDK",
+				"description": "This introducion demonstrates the usage of the Python language within TideSDK apps."
+			},
+			{
+				"name": "using_ruby",
+				"title": "Using Ruby in TideSDK",
+				"description": "This introducion demonstrates the usage of the Ruby language within TideSDK apps."
+			}
+		]
+	}/*,
 
 	{
 		"title": "Scripting Languages",
@@ -58,7 +79,7 @@
 	{
 		"title": "Development Patterns",
 		"items": []
-	},*/
+	},
 
 	{
 		"title": "Legacy Titanium Guides",
@@ -66,8 +87,8 @@
 			{
 				"name": "getting_started",
 				"title": "Getting started with TideSDK",
-				"description": "This old introducion into Titanium Desktop shows you how to use Titanium Developer."
+				"description": "This introducion into TideSDK explains the structure and features of the SDK, as well as how you can develop apps."
 			}
 		]
-	}
+	}*/
 ]

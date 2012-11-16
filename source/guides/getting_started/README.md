@@ -1,100 +1,418 @@
-Getting Started with Titanium Desktop
--------------------------------------
+#Getting Started with TideSDK
 
-###So what's Titanium?
-Titanium is a rapid application development platform that utilises the best of HTML, JavaScript, and CSS to develop quick and dynamic applications. The framework also has support for Python, Ruby and PHP with access to both the Titanium framework itself and the DOM. Essentially, you can seamlessly create desktop web applications with you favourite back-end and front-end web technologies. If you're familiar with developing client-side web applications for the web, you can transfer your skills to the desktop with relative ease.
+__Author:__ David Pratt
 
-You may have heard of (or used) Adobe AIR, and there's no hiding that Titanium is a very similar product in a number of ways. The things that set it apart from Adobe's AIR include:
+## What is TideSDK?
 
-* The framework is released under the free/open source Apache license, for ultimate compatibility with your workflow, and infinite extensibility.
-* Your existing skills in Python, Ruby, and PHP are immediately useful, without needing to learn Flash or Actionscript.
-* Cloud publishing features to compile and publish your application for multiple platforms.
-* And much more!
+TideSDK is an open source software development kit for creating multi-platform desktop apps using HTML5, CSS3, and JavaScript. With TideSDK you can also use other common scripting languages such as Python, PHP or Ruby to harness the skills you already possess as a web developer. TideSDK is the best way to create unique desktop apps using simple web technologies. 
+
+Source code for the TideSDK project is hosted on GitHub. You can reach support resources including comprehensive API documentation by visiting our site at http://tidesdk.org. TideSDK also has an extensive global developer community. Thousands of developers use and trust our technology to develop desktop apps. Perhaps one of the most recognized applications is Wunderlist.
+
+As a project, we have a core team of talented programmers, developers, and UI & design professionals. We welcome your contributions and other forms of support for the project.
+
+TideSDK has recently become an 'Affiliate Project' of software in the Public Interest. As an 'Affiliate Project' we are in the company of other important open source projects such as PostgreSQL, Debian, ArchLinux, Drupal, and Jenkins CI and we are also non-profit. Beyond recogition and credibility, our affiliation also allows us to raise funds through donations for the viability and long term future of the project. If you like or use TideSDK in your development or your business, please assist with your financial support. Donations are tax deductible in the USA.
+
+This Getting Started Guide will demonstrate simple steps to get started with the the 1.3.1-beta. Please [follow @tidesdk on twitter] for updates and announcements as continue toward the 1.4.0 stable release.
+
+[follow @tidesdk on twitter]: http://twitter.com/tidesdk
+
+## TideSDK 1.3.1
+
+TideSDK 1.3.1 contains improvements, bug fixes and a few important and breaking changes with legacy code that you need to know about. Please consult the following document:
+
+[https://github.com/TideSDK/TideSDK/blob/master/CHANGES](https://github.com/TideSDK/TideSDK/blob/master/CHANGES)
+
+## How Do I Develop a TideSDK App?
+
+TideSDK can be used with no more than a basic text editor. You do not need any special tools or an IDE (although many developers prefer richer tools). For the legacy 1.3.1 you can develop using the SDK in one of three ways:
+
+1. Using the SDK with a editor and the TideSDK Developer app
+2. Using the SDK with a editor and the tidebuilder CLI
+
+At the time of writing this guide, the maintainer of Titanium Studio have not yet updated their plugin to use TideSDK.
+
+In this Guide, we are going to get you started using using the TideSDK Developer.
+
+TideSDK also includes a 'tidebuilder.py` CLI that you can use to run your app locally for development and debugging. You can also package it with an installer native to the platform (Windows, Mac OSX and Linux are supported). To get all the needed installers, a typical TideSDK development environment will include a physical or virtual machine for each OS.
+
+### Alright, Let's Get Going
+
+So enough already, let's get going. This guide walks you through the following steps:
+
+* Downloading and Extracting the SDK
+* Downloading the intalling the TiDev app
+* Obtain the Hello-World example app
+* Importing the example app into TiDev
+* Running the example app
+* Packaging the example app locally with tibuild CLI
+
+#### STEP 1: Download and extract the SDK
+
+To get the SDK, visit [tidesdk.org] and download the right SDK version for your OS.
+
+[tidesdk.org]: http://tidesdk.org#download
+
+The 1.3.1 SDK must be extracted into a specific folder for your operating system:
+
+For Mac OSX:
+
+    /Library/Application Support/TideSDK
+
+On Linux:
+
+    ~/.tidesdk
+
+On Windows XP:
+
+    C:\Documents and Settings\All Users\Application Data\TideSDK
+
+On Windows 7:
+
+    C:\ProgramData\TideSDK
+
+The zip file will expand the contents and create/overlay some new directories for 1.3.1-beta
+
+#### STEP 2: Download the TideSDK Developer App
+
+While TideSDK can be used with no more than a basic text editor, using an app to create, run, and bundle your app is recommended until you learn a bit more about the SDK .
+
+The TideSDK Developer app is suitable for this purpose. TiDev Community has been reworked to use TideSDK. The 1.5 series of TideSDK Developer will have a fresh new inteface to make your use of it much more enjoyable. Stay tuned for this in the near future.
+
+To get TideSDK Developer, visit [tidesdk.org]
+
+Use the same 'Download 1.3.1' button. Below the SDK downloads, you will find buttons to download the Developer App for each platform
+
+[tidesdk.org]: http://tidesdk.org#download
+
+#### STEP 3: Obtain the Hello World Example App
+
+For your first app, a simple Hello World example is a good introduction. The Hello World app illustrates the following:
+
+* The use of the API to create a menu
+* Adding a menu item to a menu with a simple callback to prompt the user to exit the app
+* Displaying content using HTML and CSS.
+
+To get the TideSDK-HelloWorld app, you can either clone the app if you have git installed, or download the zip from the following location:
+
+[https://github.com/TideSDK/TideSDK-HelloWorld](https://github.com/TideSDK/TideSDK-HelloWorld)
+
+#### STEP 4: Importing the Example App into TideSDK Developer
+
+To import the Hello World example app into TideSDK Developer, click on the 'Import' button at the top left, navigate to the folder containing the the app and select it.
+
+#### STEP 5: Running the Example App
+
+To run the Hello World app, click on 'Test & Package' button in the TideSDK Developer menu, then click on the 'Launch App' button in the lower left. The Hello World app will start and will log to the screen. Debugging statements you include in your code will appear.
+
+#### STEP 6: Bundling the Example App
+
+To bundle the Hello World app, click on 'Test & Package' button in the TideSDK Developer. Then click the 'Package with Runtime'. You distribution will be created in the 'dist' folder in your project.
 
 
-###How it all works
-A Titanium application generally consists of a number of HTML, CSS, JavaScript, Python, Ruby, and PHP scripts, images, sounds, and any other resources your application requires. The application uses these resources in conjunction with a platform independent WebKit client and an extensive API. Key features include:
-
-* Full filesystem access allows you to read and manage files in a more web-independent way.
-* Internal SQLite database access makes storing local data a simple task.
-* While AJAX is still available, the network API allows you to interface with HTTP at a much lower level, or even open socket connections to other services manually.
-* Titanium includes wrappers around Desktop features such as notifications, tray icons, and window menus so you can create more natural applications for all major operating systems.
 
 
+##Packaging the Example App Locally with the CLI
 
-###Logging in
-After installing Titanium Developer, you should start the Titanium Developer product and see the following welcome screen:
+Within the SDK you download, a small CLI called tidebuilder.py is available. You can used this tool for running your app or bundling your app for distribution. tidebuilder.py has built-in help to explain the options that be given. For sample options for using tidebuild.py, refer to the following document in the TideSDK wiki:
 
-{@img developer-login.png Login Screen of the old Titanium Developer app}
-
-If you already have an existing Appcelerator Network login, you can use those credentials to login. If not, you'll need to create an Appcelerator Network login. These credentials will give you access to a number of resources like Wiki (this site), the support and knowledge base portal, as well as access to cloud services like analytics.
-
-
-###Initial application
-Once you're logged in, you'll be able to create your first desktop project. Click the "New Project" button, select "Desktop" from the Project type drop down and you should see the following:
-
-{@img developer-new-project.jpg New Project Screen of the old Titanium Developer app}
-
-
-
-###Configuration fields
-
-* _Name_ - This is the name of your application. Be sure to choose something unique and descriptive, because this is what your users will see when downloading and running your application.
-* _App Id_ - This must be a unique ID for your project, usually a namespaced URL such as com.yourcompany.application_name. It's important that this ID does not contain anything except alphanumeric characters and periods.
-* _Directory_ - This is the directory that will hold your application development directory. The full path to your project is directory/Project Name.
-* _Company/Personal URL_ - This is the URL you would like associated with your application.
-* _Titanium SDK version_ - This is the version of the Titanium Desktop SDK to use. This provides you will the ability to use different versions of the SDK for different applications. It's recommend that for new applications, you choose the latest version available.
-
-Once you've filled out the required fields, you will be able to press the Create Project button to continue. Titanium Developer will create all the necessary files for your project.
-
-
-
-###Verify your new application
-After you've created your new project, you should verify that everything is working. Click the Test &amp; Package button in the middle of the project screen and then click the "Launch App" button near the bottom left. You should see the following:
-
-{@img developer-run.png Run Screen of the old Titanium Developer app}
-
-Opening the context menu (right-clicking or control-clicking) on the content area of your application should allow you to open up the WebKit web inspector. This is a quick way to experiment with the Titanium API.
-
-
-###Application Resources
-Now, you're ready to start looking at code. Let's look at the files that Titanium Developer created. There are a number of files and important folders in your Desktop project:
-
-* _Resources_ - This folder is very important and contains all your application files such as your JavaScript, HTML, images, etc. This is the main folder you will use to include resources for your application. All files included in this folder are packaged and available to your application. Within your application you can use app:// URLs to refer to files within this folder. For instance, app://images/logo.png will refer to Resources/images/logo.png.
-* _tiapp.xml_ - This is the main application configuration file which contains details about your application and it's windows. It's recommend to only edit this file when Titanium Developer is not running. Refer to the tiapp.xml guide for more information on the tiapp.xml file.
-* _LICENSE.txt_ - This file describes the license that you application has. When a user first runs your application, they will see and have to agree to the contents of this file.
-* _manifest_ - This file describes some low-level details of your application, such as the version of the runtime that your application uses. Generally you will not need to edit this file and it should not be changed while Titanium Developer is running.
-* _dist_ - This directory is where Titanium Developer stages your application when you launch and package it. If you navigate into this directory, you can launch your application outside of Titanium Developer. As long as Titanium Developer is not running, it is safe to remove this directory.
+https://github.com/TideSDK/TideSDK/wiki/Packaging-TideSDK-apps
 
 
 
 
-###Configuring your application
-In the project perspective, click the Edit button in the middle of the screen. You should see the following screen:
+## How Does TideSDK Work
 
-{@img developer-edit.png Edit Screen of the old Titanium Developer app}
+A TideSDK project consists of a boilerplate structure including a Resources folder that contains the core project files. Resources include HTML, JavaScript, and CSS files along with any audio, video, images, or other media and script files. In addition, you can use any Javascript or CSS frameworks that you want (such as Backbone.js, Twitter Bootstrap or others) that will work within the browser.
 
-This view allows you to modify other aspects of your application including:    
-Now, you're ready to start looking at code. Let's look at the files that Titanium Developer created. There are a number of files and important folders in your Desktop project:
-
-* _Version_ - This describes the version of your application. It should be of the form major.minor[.micro]. The major and minor portions should be an integer between 1 and 256, while micro portion of the version is optional and should be an integer between 1 and 65536. It's important to follow this format so that application updates work properly for your users.
-* _Description_ - This should just be a short description of your application.
-* _Publisher_ - This will be your name or the name of your organization as appropriate.
-* _Application Icon_ - The application icon will be used as the default icon for you application in several places including the application bundle icon on OS X, the Start Menu and Desktop icons on Windows and the window and dock icon. The path displayed in the box is relative to your application Resources directory. If you choose a path outside of your project, Titanium Developer will copy the file to your Resources directory.
-* _Copyright_ - This line should be the copyright attribution line used for your application.
-* _Language Modules_ - Activating a language module will cause that language to be available for use in script tags. Be aware that adding a language module may add overhead to runtime and distribution of your application.
+The following illustrates the stucture of a simple Hello World app that will run on all supported plaforms:
 
 
-###Packaging and publishing your application
-In the project perspective, click the Test & Package button in the middle of the screen and then select the Package tab. You should see the following screen:
+		├── CHANGELOG.txt
+		├── LICENSE.txt
+		├── README.md
+		├── Resources
+		│   ├── app.js
+		│   ├── default_app_logo.png
+		│   └── index.html
+		├── manifest
+		└── tiapp.xml
 
-{@img developer-package.png Package Screen of the old Titanium Developer app}
 
-When packaging and publishing your application, it is sent to the Titanium packaging cloud and prepared for distribution on whatever platforms you wish. You have a few options when packaging:
+What follows provides some detail about the general structure of the application.
 
-* _Platforms_ - You can select any number of platforms for which to package your application. OS X applications are distributed as DMGs which contain an application bundle. Windows applications are distributed as MSI installer files. Linux applications are distributed as gzipped tar archives for either i386 or x86_64 installations.
-* _Installer Type_ - You can either select your application to be network-installed or bundled. With network installs, when a user installs your application on a system without the Titanium runtime, it will be fetched via HTTP to their computer. A bundled application will be much large, but will include a copy of the Titanium runtime.
-* _Publish Privacy_ - This determines whether or not the application will be visible to other people.
-* _Release to Users_ - This setting controls whether or not users who are using your application will receive and automatic update notification when you publish your application.
+### Resources
 
-Once you start the packaging process it may take several minutes for it to complete. when it finishes you'll be taken to the Links and given URLs to your freshly packaged application.
+All files included in the Resources folder are packaged and available to your app. Within your app, you can use `app://` URLs to refer to files within the Resources folder. For instance, `app://images/logo.png` will refer to `Resources/images/logo.png`.
+
+Applications resources are used in conjunction with a WebKit client and a familiar and extensive API. The API is privileged, providing filesystem access that allows you to read and manage files. APIs are also provided to create and interact with a local database. Network API allows to create clients and servers or to interface with HTTP at a much lower level. It is also possible to open socket connections to other services.
+
+The heart of TideSDK is an object bridge compiled into the WebKit component. The bridge allows other scripting languages - python, php or ruby - to run on the HTML page using script tags in the DOM, just like JavaScript. You can also directly call .py, .rb or .php files from within your application.
+
+Additional functionality in your app can also be obtained using mature libraries in python, php or ruby. It is also possible to embed binaries directly into the Resources folder for advanced use cases.
+
+TideSDK also includes wrappers around Desktop features such as notifications, tray icons, and window menus. This allows you to create applications with native features for all major operating systems.
+
+In the example above, app.js contains the JavaScript included by reference within the HTML file. default_app_logo.png is the image that will appear by default in the dock, system tray or in the windows of your app.
+
+The structure within the Resources file is largely up to you and is very much like developing a web app with an index.html as the starting point for the app when it is started and run. For the small hello world we've taken a very simple approach.
+
+The following is the contents of the app.js file:
+
+
+	// create and set menu
+	var menu = Ti.UI.createMenu(),
+	    fileItem = Ti.UI.createMenuItem('File'),
+	    exitItem = fileItem.addItem('Exit', function() {
+	      if (confirm('Are you sure you want to quit?')) {
+	        Ti.App.exit();
+	      }
+	    });
+
+	menu.appendItem(fileItem);
+	Ti.UI.setMenu(menu);
+
+
+Here is the HTML for the same app. It calls the script above.
+
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+	  <title>Hello World</title>
+	  <style type="text/css">
+	    body {background: #fff;}
+	  </style>
+	</head>
+	<body>
+	  <h1>Hello World</h1>
+	  <script type="text/javascript" src="app.js"></script> 
+	</body>
+	</html>
+
+
+In less than 10 lines of JavaScript code, we create a menu, adding 'File' and 'Exit' menu items, and set it to the main window. A simple callback method is used to pop open a exit confirmation dialog. If the user confirms, the app will exit.
+
+The Hello World app is a very basic illustration of a TideSDK app. Our TideBuilder app in GitHub is an example of an app that illustrates a modular approach to development that includes using Backbone, Bootstrap and require.js.
+
+For TideSDK 1.4.0, CommonJS will be fully integrated to provide the highest level of modular development using JavaScript.
+
+### CHANGLOG.txt
+
+This file is a log or record of changes to your app including fixes, features, and updates over its release history.
+
+### LICENSE.txt
+
+The  LICENSE.txt file should be filled with the license you have applied to your software. When a user runs your app for the first time, the LICENSE.txt will be dispayed. This user will be given an opportunity to agree to the license to proceed.
+
+### README.md
+
+A README.md can provide some general information including a description of the software. Since many organizations use git and GitHub, the README.md can be used to communicate about your TideSDK project.
+
+### Manifest and Activating a Language Module
+
+The manifest contains information about the runtime modules used by the project. If you use the TideSDK Developer app, you don't have to modify this file manually.
+
+
+	#appname:HelloWorld
+	#appid:com.tidesdk.helloworld
+	#publisher:Software in the Public Interest (SPI) Inc
+	#image:default_app_logo.png
+	#url:http//tidesdk.org
+	#guid:845e9c3c-c9ff-4ad4-afdf-9638092f044f
+	#desc:Sample Hello World application
+	#type:desktop
+	runtime:1.3.1-beta
+	app:1.3.1-beta
+	codec:1.3.1-beta
+	database:1.3.1-beta
+	filesystem:1.3.1-beta
+	media:1.3.1-beta
+	monkey:1.3.1-beta
+	network:1.3.1-beta
+	platform:1.3.1-beta
+	process:1.3.1-beta
+	ui:1.3.1-beta
+	worker:1.3.1-beta
+
+
+If you plan on use python, php or ruby support, you need to add the corresponding module. For example, Python can be used now in the application with the addition of the language module as illustrated below:
+
+
+	#appname:HelloWorld
+	#appid:com.tidesdk.helloworld
+	#publisher:Software in the Public Interest (SPI) Inc
+	#image:default_app_logo.png
+	#url:http//tidesdk.org
+	#guid:845e9c3c-c9ff-4ad4-afdf-9638092f044f
+	#desc:Sample Hello World application
+	#type:desktop
+	runtime:1.3.1-beta
+	app:1.3.1-beta
+	codec:1.3.1-beta
+	database:1.3.1-beta
+	filesystem:1.3.1-beta
+	media:1.3.1-beta
+	monkey:1.3.1-beta
+	network:1.3.1-beta
+	platform:1.3.1-beta
+	process:1.3.1-beta
+	ui:1.3.1-beta
+	worker:1.3.1-beta
+	python:1.3.1-beta
+
+
+Activating a language module will cause that language to be available for use in script tags. Be aware that adding a language module may add overhead to the runtime and distribution of your application.
+
+### tiapp.xml Configuration
+
+tiapp.xml provides app configuration using XML syntax. If you use the TideSDK Developer app it will create a generic tiapp.xml file for you. The tiapp.xml for the HelloWorld app is below:
+
+
+	<?xml version='1.0' encoding='UTF-8'?>
+	<ti:app xmlns:ti='http://ti.appcelerator.org'>
+	<id>com.tidesdk.helloworld</id>
+	<name>HelloWorld</name>
+	<version>0.2.0</version>
+	<publisher>Software in the Public Interest (SPI) Inc</publisher>
+	<url>http//tidesdk.org</url>
+	<icon>default_app_logo.png</icon>
+	<copyright>2012 by David Pratt</copyright>
+	<!-- Window Definition - these values can be edited -->
+	<window>
+	<id>initial</id>
+	<title>HelloWorld</title>
+	<url>app://index.html</url>
+	<width>700</width>
+	<max-width>3000</max-width>
+	<min-width>0</min-width>
+	<height>500</height>
+	<max-height>3000</max-height>
+	<min-height>0</min-height>
+	<fullscreen>false</fullscreen>
+	<resizable>true</resizable>
+	<chrome scrollbars="true">true</chrome>
+	<maximizable>true</maximizable>
+	<minimizable>true</minimizable>
+	<closeable>true</closeable>
+	</window>
+	</ti:app>
+
+
+####Window elements 
+
+The `tiapp.xml` file contains one or more window config elements which describe window properties. The first `window` element listed will be the main window, which is the window created when your application first starts. Here is a typical window element: 
+
+
+	<window> 
+	<id>initial</id> 
+	<title>asdf</title> 
+	<url>app://index.html</url> 
+	<width>700</width> 
+	<max-width>3000</max-width> 
+	<min-width>0</min-width> 
+	<height>500</height> 
+	<max-height>3000</max-height> 
+	<min-height>0</min-height> 
+	<fullscreen>false</fullscreen> 
+	<resizable>true</resizable> 
+	<chrome scrollbars="true">true</chrome> 
+	<maximizable>true</maximizable> 
+	<minimizable>true</minimizable> 
+	<closeable>true</closeable> 
+	</window> 
+
+
+### id 
+
+This element specifies the ID of this window config. This allows you to identify windows by ID. Window using this config will return this value when you call {{Ti.UI.currentWindow.getId()}}. 
+
+### title 
+
+This element specifies the window title. On most systems the window title is visible on the title bar of the window. 
+
+### url 
+
+This element specifies the initial URL for this window. This may be an {{app://}} URL such as {{app://index.html}}, which resolves to the {{index.html}} file in the Resources directory of your application. The value of this element should contain an absolute URL. 
+
+### url-regex 
+
+If you specify a `url-regex` element for your window, calls to `Ti.UI.createWindow()` given only a URL (no configuration object) which matches against the URL provided wil use this config. For example if your `url-regex` element looks like: 
+
+
+	<url-regex>.*special.*</url-regex> 
+
+
+and then have the code: 
+
+
+	Ti.UI.createWindow("app://special-window.html") 
+
+
+the next window will use this window config. The value of this element should contain a valid PCRE string. 
+
+### width and height 
+
+The `width` and `height` attributes allow you to specify the initial width and height of your window in pixels. You may modify this setting by calling `window.setHeight()` and `window.setWidth()`. 
+
+### x and y 
+
+The `x` and `y` elements specify the initial screen position of windows using this configuration. All platforms use an origin that is in the top-left of the screen. 
+
+### visible 
+
+The value of the `visible` should either be `true` or `false`. A false value here means that the window is initially hidden i.e. the equivalent of calling `Ti.UI.currentWindow.hide()`. A hidden window may be shown by calling `Ti.UI.UserWindow.show()` or `Ti.UI.UserWindow.setVisible(true)`. 
+
+### max-width, max-height, min-width, and min-height 
+
+These elements allow you to specify a minimum and maximum width or height for your window. A value of `-1` in these fields is equivalent to having no value specified. These values will override manual settings. For example if you specify: 
+
+
+	<max-width>300</max-width> 
+	<width>400</width> 
+
+
+the initial window width will be 300 pixels. 
+
+### fullscreen 
+
+The value of the `fullscreen` element should either be `true` or `false`. A value of `true` causes windows with this config to start in a fullscreened state. A window may modify its fullscreen state `Ti.UI.UserWindow.setFullscreen();`. 
+
+### maximizable 
+
+The value of the `maximizable` element should either be `true` or `false`. A value of `false` will make user interface elements allowing the user to maximize or zoom (OS X) the window hidden. It does not interfere with calls to `Ti.UI.UserWindow.maximize()` or `Ti.UI.UserWindow.unmaximize()`. 
+
+### maximized 
+
+The value of the `maximized` element should either be `true` or `false`. A value of `true` will cause the window to started in a maximized or zoomed state. 
+
+### minimizable 
+
+The value of the `maximizable` element should either be `true` or `false`. A value of `false` will make user interface elements allowing the user to minimize the window hidden. It does not interfere with calls to `Ti.UI.UserWindow.minimize()` or `Ti.UI.UserWindow.unminimize()`. 
+
+### minimized 
+
+The value of the `minimized` element should either be `true` or `false`. A value of `true` will cause the window to started in a minimized state. 
+
+### closeable 
+
+The value of the `closeable` element should either be `true` or `false`. A value of `false` will make user interface elements allowing the user to close the window hidden. It does not interfere with calls to `Ti.UI.UserWindow.close()`.
+
+### chrome 
+
+The value of the `chrome` element should either be `true` or `false`. A value of `false` will make create a window with no window borders and controls. A window created without chrome cannot add it later. Additionally the `chrome` element has a `srollbars` attribute which can be either `true` or `false`. A window with a `true` or undefined value for `scrollbars` property will create a scrollbar in the WebView when the content of the view extends beyond the boundaries of the window. 
+
+### resizable 
+
+The value of the `chrome` element should either be `true` or `false`. A value of `false` will make create a window with no window borders and controls. A window created without chrome cannot add it later. 
+
+### transparency and transparent-background 
+
+There are two types of transparency in TideSDK. Full window transparency specified with the `transparency` property and background transparency specified with the `transparent-background` property. The `transparent` element should contain a value between 0.0 and 1.0 and specifies the opacity of the total window. A window with a transparency value of 0.7 would look like: 
+
+{@img transparency.png The `transparency` property}
+
+The `transparent-background` property specifies that the WebView in a window has a background which is transparent. Elements in the WebView may specify different opacities to create non-rectangular windows. Here is an example of a non-rectangular TideSDK window with a `transparent-background` value of `true`: 
+
+{@img transparent-background.png The transparent-background property}
+
+Note that currently the `transparent-background` property disables all chrome and overrides the `transparency` property. If you'd like to allow your users to drag a window by its contents, you can do this via JavaScript.
