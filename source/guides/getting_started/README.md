@@ -56,7 +56,7 @@ The 1.3.1 SDK must be extracted into a specific folder for your operating system
 
 For Mac OSX:
 
-    /Library/Application Support/TideSDK
+    ~/Library/Application Support/TideSDK
 
 On Linux:
 
