@@ -5,15 +5,15 @@
 *      
 * This can be demonstrated with the example below.     
 *		
-* 		var echoCmd = Titanium.platform === "win32" ? ["C:\\Windows\\System32\\cmd.exe", "/C", "echo"] : ["/bin/echo"];
+* 		var echoCmd = Ti.platform === "win32" ? ["C:\\Windows\\System32\\cmd.exe", "/C", "echo"] : ["/bin/echo"];
 *	
 * 		echoCmd.push("Data.from.echo!");
 *
-* 		var moreCmd = Titanium.platform === "win32" ? ["C:\\Windows\\System32\\more.com"] : ["cat"];
+* 		var moreCmd = Ti.platform === "win32" ? ["C:\\Windows\\System32\\more.com"] : ["cat"];
 *
 * 		// Create the processes.
-* 		var echo = Titanium.Process.createProcess(echoCmd);
-* 		var more = Titanium.Process.createProcess(moreCmd);
+* 		var echo = Ti.Process.createProcess(echoCmd);
+* 		var more = Ti.Process.createProcess(moreCmd);
 *		
 *			//Code for displaying the data received by the 'more' process.
 * 		more.setOnReadLine(function(data) {

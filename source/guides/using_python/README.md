@@ -138,7 +138,7 @@ test.py for the above example:
     file_mask = window.prompt("Please enter the file mask to search on", "*.js");
      
     source_dir = "/Users/aland/apps/tweetanium-appstore/Resources"
-    sdk_dir = "/Library/Application\ Support/Titanium/sdk/osx/1.1.0/"
+    sdk_dir = "~/Library/Application\ Support/Titanium/sdk/osx/1.1.0/"
     filepaths = [] 
     contents = "/tmp/Contents"
      

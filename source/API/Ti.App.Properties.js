@@ -30,9 +30,9 @@
 * ---------------
 * User properties are obtained using the same interface as System properties. 
 * Its recommended that you store these in the application data directory.   
-* On Windows, this is __%appdata%/Titanium/appdata.__  
-* On Linux, this is __~/.titanium/appdata/.__  
-* On OSX, this is __~/Library/Application Support/Titanium/appdata.__  
+* On Windows, this is __%appdata%/TideSDK/appdata.__
+* On Linux, this is __~/.tidesdk/appdata/.__
+* On OSX, this is __~/Library/Application Support/TideSDK/appdata.__
 *
 * Let's take a look at the example below:
 * 

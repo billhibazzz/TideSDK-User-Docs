@@ -172,7 +172,7 @@ Method 2:
   </script>
 
 
-External PHP code has full access to the DOM and the Titanium object as usual. There is one important difference between the approaches described above:
+External PHP code has full access to the DOM and the TideSDK object as usual. There is one important difference between the approaches described above:
 
 * When including PHP via the include or require commands, you should surround your code with `<?php ?>` tags
 * When including with `<script>` tags, you should not surround it with `<?php ?>` tags.
@@ -200,9 +200,9 @@ Direct references to php files can also be made your app can be made just like i
 
 ##PHP Preprocessing
 
-If you do surround your PHP code with <?php ?> and place it in a file that ends in the .php extension, it will be preprocessed. Preprocessed Titanium works is a way similar to PHP code on an Apache server. The script contents are replaced with the script output before the content is rendered by the browser. 
+If you do surround your PHP code with <?php ?> and place it in a file that ends in the .php extension, it will be preprocessed. Preprocessed TideSDK works is a way similar to PHP code on an Apache server. The script contents are replaced with the script output before the content is rendered by the browser.
 
-Note that preprocessed PHP does not have access to the Titanium object and cannot interact directly with the DOM.
+Note that preprocessed PHP does not have access to the TideSDK object and cannot interact directly with the DOM.
 
 For example, you have a file named `test.php` with the contents:
 

@@ -40,9 +40,9 @@ TideSDK also includes a 'tidebuilder.py` CLI that you can use to run your app lo
 So enough already, let's get going. This guide walks you through the following steps:
 
 * Downloading and Extracting the SDK
-* Downloading the intalling the TiDev app
+* Downloading the installing the TideSDK Developer app
 * Obtain the Hello-World example app
-* Importing the example app into TiDev
+* Importing the example app into TideSDK Developer
 * Running the example app
 * Packaging the example app locally with tibuild CLI
 
@@ -269,7 +269,7 @@ tiapp.xml provides app configuration using XML syntax. If you use the TideSDK De
 
 
 	<?xml version='1.0' encoding='UTF-8'?>
-	<ti:app xmlns:ti='http://ti.appcelerator.org'>
+	<ti:app xmlns:ti='http://ti.tidesdk.org'>
 	<id>com.tidesdk.helloworld</id>
 	<name>HelloWorld</name>
 	<version>0.2.0</version>
