@@ -58,6 +58,8 @@ For Mac OSX:
 
     ~/Library/Application Support/TideSDK
 
+_Heads up! This is the library folder inside your user folder, NOT the global library folder._
+
 On Linux:
 
     ~/.tidesdk
@@ -70,11 +72,20 @@ On Windows 7:
 
     C:\ProgramData\TideSDK
 
+_Heads up!_    
+On windows, you also need this for packaging your apps:
+
+* [Imagemagick]
+* [Wix 3.0]
+
+[Imagemagick]: http://www.imagemagick.org
+[Wix 3.0]: http://wix.codeplex.com/releases/view/44406
+
 The zip file will expand the contents and create/overlay some new directories for 1.3.1-beta
 
 #### STEP 2: Download the TideSDK Developer App
 
-While TideSDK can be used with no more than a basic text editor, using an app to create, run, and bundle your app is recommended until you learn a bit more about the SDK .
+While TideSDK can be used with no more than a basic text editor, using an app to create, run, and bundle your app is recommended until you learn a bit more about the SDK.
 
 The TideSDK Developer app is suitable for this purpose. TiDev Community has been reworked to use TideSDK. The 1.5 series of TideSDK Developer will have a fresh new inteface to make your use of it much more enjoyable. Stay tuned for this in the near future.
 
@@ -96,13 +107,21 @@ To get the TideSDK-HelloWorld app, you can either clone the app if you have git 
 
 [https://github.com/TideSDK/TideSDK-HelloWorld](https://github.com/TideSDK/TideSDK-HelloWorld)
 
+{@img download.jpg}
+
 #### STEP 4: Importing the Example App into TideSDK Developer
 
-To import the Hello World example app into TideSDK Developer, click on the 'Import' button at the top left, navigate to the folder containing the the app and select it.
+To import the Hello World example app into TideSDK Developer, click on the 'Import' button at the top left, navigate to the folder containing the app and select it.
+
+{@img developer_import.jpg Click the "Import Project" button}
 
 #### STEP 5: Running the Example App
 
 To run the Hello World app, click on 'Test & Package' button in the TideSDK Developer menu, then click on the 'Launch App' button in the lower left. The Hello World app will start and will log to the screen. Debugging statements you include in your code will appear.
+
+{@img developer_launch.jpg Launch the Example App from the Test&Package section.}
+
+{@img developer_running.jpg The running Hello World app}
 
 #### STEP 6: Bundling the Example App
 

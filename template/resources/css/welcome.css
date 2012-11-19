@@ -1,3 +1,14 @@
+a{
+  color: #f25425;
+}
+a:hover{
+  color: #222;
+}
+
+.toc a{
+  color: #083772;
+}
+
 .wpage{
   width: 800px;
   margin: 0 auto;
