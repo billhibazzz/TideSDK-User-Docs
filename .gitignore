@@ -1,2 +1,5 @@
 generated
 TideSDK
+.idea
+source/welcome.html
+source/doc_build.json

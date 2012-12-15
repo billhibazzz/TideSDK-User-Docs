@@ -3,11 +3,28 @@ TideSDK API Docs
 The TideSDK API Docs are built, using JSduck from sencha.    
 If you want to make your own build of the docs, you have to install the JSduck gem on your machine.
 
-To build the docs with JSduck, point to the source/ folder and call the following command:
+###Building the docs locally
 
+To build the docs with JSduck, call the following commands:
+First, build the welcome.html file as documentation index.
+
+
+    cd /helpers/welcome
+    node welcome.build.js
+
+This will create `source/welcome.html` which you need to compile the docs with the following command:
+
+    cd /source
     jsduck --config doc_build.json
 
 To compile the documentation into the generated/ folder.
+
+After you compiled the docs, or if you just want to create the latest Ti.js for autocompletion in your IDE, call:
+
+    cd /helpers/source_contatenator
+    node source-concatenator.js
+
+This will create the file `generated/resources/Ti.js`, which only exists if you built the docs beforehand.
 
 
 ###The API

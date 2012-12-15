@@ -22,8 +22,8 @@ A doctag to a function should always be structured like this:
 	/**
 	* The block starts with a description of the functon/method/object you want to document.
 	*
-	* @class Titanium.Module.Name
-	* @member Titanium.Module
+	* @class Ti.Module.Name
+	* @member Ti.Module
 	*/
 
 The @class tag gets the full path to the object you want to document, including the object name itself.
