@@ -171,7 +171,7 @@ The Python module currently uses the following version of Python depending on yo
 There are a few ways to include Python scripts on your Titanium pages. As demonstrated above, you can include a script tag with type="text/python." If you have a Python source file that you want to include you can also do this:
 
 
-  <script type="text/python" src="myfile.py"/>
+  <script type="text/python" src="myfile.py"></script>
 
 
 As well as using <tt>script</tt> tags to include Python, you can use Python <tt>import</tt>. By default your application's Resources directory is on the Python import path, so this is the recommended place to include Python source files in your application.
